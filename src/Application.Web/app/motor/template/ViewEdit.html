@@ -1,0 +1,62 @@
+<div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">X</button>
+            <h4 class="modal-title">Form Edit Single Item</h4>
+        </div>
+        <div class="modal-body">
+            <form  id="formAddNew" class="form-horizontal row" action="#">
+                <fieldset>
+                <div class="form-group">
+                    <label class="col-md-4 control-label" >Nomor Polisi</label>
+                    <div class="col-md-5">
+                        <input id="textNoPol" value="<%= nopol %>" type="text" class="form-control input-md">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Merk</label>
+                    <div class="col-md-5">
+                        <input id="textMerk" value="<%= merk %>" type="text"class="form-control input-md">
+                </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Nama Pemilik</label>
+                    <div class="col-md-6">
+                        <input id="textPemilik" value="<%= pemilik %>"type="text" class="form-control input-md">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Jenis</label>
+                    <div class="col-md-4">
+                        <input id="textJenis" type="text" value="<%= jenis %>" class="form-control input-md">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Daerah</label>
+                    <div class="col-md-4">
+                        <input id="textDaerah" type="text" value="<%= daerah %>"class="form-control input-md">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Tahun</label>
+                    <div class="col-md-4">
+                        <input id="textTahun" type="text" value="<%= tahun %>"class="form-control input-md">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Warna</label>
+                    <div class="col-md-4">
+                        <input id="textWarna" type="text" value="<%= warna %>" class="form-control input-md">
+                    </div>
+                </div>
+                </fieldset>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <span id="modalError" class="pull-left"></span>
+            <button class="btn btn-default" data-dismiss="modal">Cancel</button>
+            <button class="btn btn-primary" save>Save</button>
+        </div>
+        </div>
+    </div>
+</div>

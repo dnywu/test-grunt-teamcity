@@ -1,0 +1,24 @@
+[
+    {
+        "id": "1",
+        "tipe": "36/97",
+        "luastanah": "97 m2",
+        "luasbangunan": "36 m2",
+        "warna": "ORANGE",
+        "pemilik":"WINTORO",
+        "penghuni":"WINTORO",
+        "alamat": "VILLA MUKA KUNING",
+        "telp": "08192660848"
+    },
+    {
+        "id": "2",
+        "tipe": "36/79",
+        "luastanah": "79 m2",
+        "luasbangunan": "36 m2",
+        "warna": "BIRU",
+        "pemilik":"JOKO",
+        "penghuni":"ALEX",
+        "alamat": "KAMPUNG TUA",
+        "telp": "08212546186"
+    }
+]

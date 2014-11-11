@@ -1,0 +1,30 @@
+[{
+    "id": "1",
+    "nopol": "BP 1234 AA",
+    "merk": "TOYOTA",
+    "jenis": "MOBIL",
+    "tahun": "2013",
+    "pemilik":"AGUS",
+    "daerah":"BATAM",
+    "warna":"PUTIH"
+},
+{
+    "id": "2",
+    "nopol": "BP 2345 AB",
+    "merk": "HONDA",
+    "jenis": "MOBIL",
+    "tahun": "2013",
+    "pemilik":"AGUS",
+    "daerah":"BATAM",
+    "warna":"PUTIH"
+},
+{
+    "id": "3",
+    "nopol": "BP 3456 AC",
+    "merk": "SUZUKI",
+    "jenis": "MOBIL",
+    "tahun": "2014",
+    "pemilik":"DIAN",
+    "daerah":"BATAM",
+    "warna":"MERAH"
+}]

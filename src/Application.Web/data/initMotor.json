@@ -1,0 +1,30 @@
+[{
+    "id": "1",
+    "nopol": "BP 9999 X",
+    "merk": "HONDA",
+    "jenis": "MOTOR",
+    "tahun": "2013",
+    "pemilik":"JOHAN",
+    "daerah":"BATAM",
+    "warna":"MERAH"
+},
+{
+    "id": "2",
+    "nopol": "BP 8888 Y",
+    "merk": "YAMAHA",
+    "jenis": "MOTOR",
+    "tahun": "2014",
+    "pemilik":"ADI PRAMONO",
+    "daerah":"BATAM",
+    "warna":"BIRU"
+},
+{
+    "id": "3",
+    "nopol": "BP 7777 Z",
+    "merk": "KAWASAKI",
+    "jenis": "MOTOR",
+    "tahun": "2013",
+    "pemilik":"EDO SUWONDO",
+    "daerah":"BATAM",
+    "warna":"HIJAU"
+}]
