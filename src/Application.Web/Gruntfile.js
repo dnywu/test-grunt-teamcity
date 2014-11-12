@@ -86,7 +86,21 @@ module.exports = function(grunt) {
         ]
       }
     },
-
+    qunit: {
+        all: {
+            options: {
+            timeout: 100000,
+            urls: [
+                'http://boiler.dev/test/index.html'
+                ]
+            }
+        }
+    },
+    mocha: {
+      test: {
+        src: ['test/test.html'],
+      },
+    },
     // compress: {
     //   release: {
     //     files: ["dist/index.min.js"]
@@ -99,32 +113,22 @@ module.exports = function(grunt) {
         ]
       }
     }
-    // replace:{
-    //     indexProd:{
-    //         src:['index_production.html'],
-    //         dest:'/',
-    //         replacements:[{
-    //             from: 'styles_xxx.min.css',
-    //             to: 'styles_'+ tgljam +'.min.css',
-    //         },{
-    //             from: 'source_xxx.min',
-    //             to: 'source_'+ tgljam +'.min',
-    //         }]
-    //     }
-    // }
   });
 
   // Grunt contribution tasks.
   grunt.loadNpmTasks("grunt-contrib-clean");
   grunt.loadNpmTasks("grunt-contrib-jshint");
-  grunt.loadNpmTasks("grunt-contrib-cssmin");
+  grunt.loadNpmTasks("grunt-contrib-qunit");
+  // grunt.loadNpmTasks("grunt-contrib-cssmin");
   grunt.loadNpmTasks("grunt-contrib-copy");
   grunt.loadNpmTasks("grunt-contrib-compress");
+  grunt.loadNpmTasks('grunt-mocha');
+  // grunt.loadNpmTasks('grunt-contrib-watch');
 
   // Third-party tasks.
-  //  grunt.loadNpmTasks("grunt-processhtml");
-  grunt.loadNpmTasks("grunt-rename");
-  grunt.loadNpmTasks("grunt-text-replace");
+  grunt.loadNpmTasks("grunt-processhtml");
+  // grunt.loadNpmTasks("grunt-rename");
+  // grunt.loadNpmTasks("grunt-text-replace");
 
   // Grunt BBB tasks.
   grunt.loadNpmTasks("grunt-bbb-requirejs");
@@ -137,8 +141,33 @@ module.exports = function(grunt) {
     "requirejs",
     // "cssmin",
     "compress",
+    "mocha",
+    // "qunit",
 	// "rename",
 	"clean:removeIncluded",
     // "replace:indexProd"
   ]);
+
+    grunt.event.on('qunit.begin', function() {
+        grunt.log.ok("Qunit beginning");
+    });
+    grunt.event.on('qunit.moduleStart', function(name) {
+        grunt.log.ok("Qunit module start: " + name);
+    });
+    grunt.event.on('qunit.testStart', function(name) {
+        grunt.log.ok('qunit test starting: ' + name);
+    });
+    grunt.event.on('qunit.testDone', function(name) {
+        grunt.log.ok('qunit test done: ' + name);
+    });
+    grunt.event.on('qunit.moduleDone', function(name) {
+        grunt.log.ok("Qunit module done: " + name);
+    });
+    grunt.event.on('qunit.done', function() {
+        grunt.log.ok("Qunit done");
+    });
+
+    grunt.event.on('qunit.error.onError', function(message, trace) {
+        grunt.log.error('qunit error: ' + message);
+    });
 };

@@ -8,7 +8,8 @@ require.config({
         backbone: '../libs/backbone/backbone',
         bootstrap: '../libs/bootstrap/dist/js/bootstrap.min',
         'text' : '../libs/requirejs-text/text',
-        'QUnit': '../libs/qunit/qunit/qunit'
+        mocha : '../libs/mocha/mocha',
+        // QUnit: '../libs/qunit/qunit/qunit'
     },
     shim: {
         'underscore': {
@@ -21,12 +22,8 @@ require.config({
             deps: ['underscore', 'jquery', 'text','bootstrap'],
             exports: 'Backbone'
         },
-       'QUnit': {
-           exports: 'QUnit',
-           init: function() {
-               QUnit.config.autoload = false;
-               QUnit.config.autostart = false;
-           }
+        mocha: {
+            exports: 'mocha',
        }
     }
 });
@@ -34,18 +31,19 @@ require.config({
 // require the unit tests.
 require([
     'backbone',
-    'QUnit',
-    '../../test/MobilSpec',
-    '../../test/MotorSpec',
-    '../../test/RumahSpec',
+    'mocha',
+    // '../../test/MobilSpec',
+    // '../../test/MotorSpec',
+    // '../../test/RumahSpec',
+    '../../test/mochaTest4',
 ], function(Backbone, QUnit, MobilSpec, MotorSpec, RumahSpec) {
         // run the tests.
-        MobilSpec.run();
-        // MotorSpec.run();
+        //MobilSpec.run();
+         MotorSpec.run();
         // RumahSpec.run();
 
         // start QUnit.
-        // QUnit.load();
+        QUnit.load();
         QUnit.start();
     }
 );

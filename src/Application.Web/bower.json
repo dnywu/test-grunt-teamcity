@@ -9,6 +9,8 @@
         "qunit": null,
         "bootstrap": null,
         "pace":null,
-        "requirejs-text": null
+        "requirejs-text": null,
+        "mocha":null,
+        "chai":null
     }
 }
