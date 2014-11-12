@@ -13,7 +13,7 @@ describe('Wombat', function() {
 
     it('should name itself if name passed in options', function() {
         this.wombat = new Wombat({ name: 'Matt' });
-        expect(this.wombat).property('name', 'Matt');
+        expect(this.wombat).property('name', 'Matto');
     });
 
     describe('#eat', function() {
