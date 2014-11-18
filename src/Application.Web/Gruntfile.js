@@ -59,6 +59,23 @@ module.exports = function(grunt) {
                     ]
                 }
             }
+        },
+        'ftp-deploy': {
+            build: {
+                auth: {
+                    host: 'aboutbatam.com',
+                    port: 21,
+                    authKey: 'key1',
+                    authPath: '.ftpConfig'
+                },
+                src: 'build/inde.html',
+                dest: '/home/iflexin1/public_html/aboutbatam.com'
+                // exclusions: [
+                //     'path/to/source/folder/**/.DS_Store',
+                //     'path/to/source/folder/**/Thumbs.db',
+                //     'path/to/dist/tmp'
+                // ]
+            }
         }
     });
     grunt.file.defaultEncoding = 'utf8';
@@ -66,6 +83,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-ftp-deploy');
     // grunt.loadNpmTasks('grunt-contrib-copy');
     // grunt.loadNpmTasks('grunt-mocha');
     // grunt.loadNpmTasks('grunt-processhtml');
@@ -75,6 +93,7 @@ module.exports = function(grunt) {
     [
         'clean',
         'jshint',
-        'requirejs'
+        'requirejs',
+        'ftp-deploy'
     ]);
 };

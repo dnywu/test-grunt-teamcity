@@ -5,11 +5,12 @@
   "private": true,
   "devDependencies": {
     "grunt": "~0.4.1",
-    "grunt-contrib-requirejs" : "~v0.4.4",
-    "grunt-contrib-clean" : "~0.5.0",
+    "grunt-contrib-clean": "~0.5.0",
     "grunt-contrib-copy": "~0.5.0",
     "grunt-contrib-jshint": "~0.8.0",
+    "grunt-contrib-requirejs": "~v0.4.4",
     "grunt-contrib-uglify": "^0.6.0",
+    "grunt-ftp-deploy": "^0.1.9",
     "grunt-mocha": "^0.4.11",
     "grunt-processhtml": "~0.3.0",
     "grunt-text-replace": "~0.3.11"
