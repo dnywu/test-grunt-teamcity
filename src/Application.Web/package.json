@@ -5,28 +5,13 @@
   "private": true,
   "devDependencies": {
     "grunt": "~0.4.1",
-    "grunt-contrib-clean": "~0.5.0",
-    "grunt-contrib-compress": "~0.6.0",
-    "grunt-contrib-concat": "^0.5.0",
+    "grunt-contrib-requirejs" : "~v0.4.4",
+    "grunt-contrib-clean" : "~0.5.0",
     "grunt-contrib-copy": "~0.5.0",
-    "grunt-contrib-cssmin": "~0.7.0",
     "grunt-contrib-jshint": "~0.8.0",
     "grunt-contrib-uglify": "^0.6.0",
     "grunt-mocha": "^0.4.11",
     "grunt-processhtml": "~0.3.0",
     "grunt-text-replace": "~0.3.11"
-  },
-  "peerDependencies": {
-    "generator-bbb": "*",
-    "bower": "*",
-    "grunt-cli": "*",
-    "coveralls": "*"
-  },
-  "scripts": {
-    "test": "grunt test coveralls"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/backbone-boilerplate/backbone-boilerplate.git"
   }
 }
