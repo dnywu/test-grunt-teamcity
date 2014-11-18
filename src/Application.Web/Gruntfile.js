@@ -61,15 +61,15 @@ module.exports = function(grunt) {
             }
         },
         'ftp-deploy': {
-            build: {
+            upload: {
                 auth: {
-                    host: 'aboutbatam.com',
+                    host: 'iflexinspira.com',
                     port: 21,
                     authKey: 'key1',
                     authPath: '.ftpConfig'
                 },
-                src: 'build/inde.html',
-                dest: '/home/iflexin1/public_html/aboutbatam.com'
+                src: 'build',
+                dest: 'public_html/aboutbatam.com'
                 // exclusions: [
                 //     'path/to/source/folder/**/.DS_Store',
                 //     'path/to/source/folder/**/Thumbs.db',
