@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>Example Mocha Test</title>
+    <link rel="stylesheet" href="../libs/mocha/mocha.css" type="text/css" charset="utf-8" />
+</head>
+<body>
+    <div id="mocha"></div>
+    <script src="../libs/mocha/mocha.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" charset="utf-8">
+        mocha.setup('bdd');
+    </script>
+    <script src="../libs/phantomjs/bridge.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../libs/chai/chai.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" charset="utf-8">
+        var expect = chai.expect;
+    </script>
+    <script src="js/wombat.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/apple.js" type="text/javascript" charset="utf-8"></script>
+    <script src="spec/wombat.js" type="text/javascript" charset="utf-8"></script>
+    <script src="spec/apple.js" type="text/javascript" charset="utf-8"></script>
+
+    <script type="text/javascript" charset="utf-8">
+        mocha
+            .run();
+    </script>
+</body>
+</html>
